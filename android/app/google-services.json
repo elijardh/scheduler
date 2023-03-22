@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "999262273609",
+    "project_id": "scheduler-e9dcb",
+    "storage_bucket": "scheduler-e9dcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999262273609:android:dcd0f8ece657bd1b79bf98",
+        "android_client_info": {
+          "package_name": "com.eccentric.scheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "999262273609-m704c8001bvk0ca3sbik46plid4lfs6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWYczXoh95pshgIQSQZE0D_dfns7YdkEg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "999262273609-m704c8001bvk0ca3sbik46plid4lfs6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,91 @@
+name: scheduler
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.6.0
+  firebase_messaging: ^14.2.1
+  firebase_auth: ^4.2.5
+  firebase_core: ^2.4.1
+  loader_overlay: ^2.1.0
+  intl: ^0.17.0
+  firebase_database: ^10.0.9
+  cloud_firestore: ^4.3.1
+  provider: ^6.0.5
+  flutter_local_notifications: ^9.1.5
+  permission_handler: ^8.3.0
+  shared_preferences: ^2.0.8
+  dio: ^4.0.6
+  uuid: ^3.0.7
+  sqflite: ^2.2.4+1
+  path_provider: ^2.0.12
+  google_maps_flutter: ^2.2.3
+  geolocator: ^9.0.2
+  flutter_polyline_points: ^1.0.0
+  url_launcher: ^6.1.9
+  map_launcher: ^2.5.0+1
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/images/jpg/
+    - assets/images/png/
+    - assets/images/svg/
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets\fonts\poppins\Poppins-Black.ttf
+        - asset: assets\fonts\poppins\Poppins-BlackItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-Bold.ttf
+        - asset: assets\fonts\poppins\Poppins-BoldItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-ExtraBold.ttf
+        - asset: assets\fonts\poppins\Poppins-ExtraBoldItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-ExtraLight.ttf
+        - asset: assets\fonts\poppins\Poppins-ExtraLightItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-Italic.ttf
+        - asset: assets\fonts\poppins\Poppins-Light.ttf
+        - asset: assets\fonts\poppins\Poppins-LightItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-Medium.ttf
+        - asset: assets\fonts\poppins\Poppins-MediumItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-Regular.ttf
+        - asset: assets\fonts\poppins\Poppins-SemiBold.ttf
+        - asset: assets\fonts\poppins\Poppins-SemiBoldItalic.ttf
+        - asset: assets\fonts\poppins\Poppins-Thin.ttf
+        - asset: assets\fonts\poppins\Poppins-ThinItalic.ttf
