@@ -1,16 +1,12 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:map_launcher/map_launcher.dart';
 import 'package:scheduler/app/database/sql_helper.dart';
 import 'package:scheduler/app/database/student_lecture_model.dart';
-import 'package:scheduler/app/navigation/navigator.dart';
 import 'package:scheduler/app/presentations/colors.dart';
 import 'package:scheduler/app/presentations/margin.dart';
 import 'package:scheduler/app/presentations/texts.dart';
-import 'package:scheduler/core/student/student_dashboard/screens/lecture_history.dart';
-import 'package:scheduler/core/student/student_dashboard/screens/map_screens.dart';
 import 'package:scheduler/core/student/student_dashboard/widgets/student_lecture_widget.dart';
 
 class StudentDashboard extends StatefulWidget {

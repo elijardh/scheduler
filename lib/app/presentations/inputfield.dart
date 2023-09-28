@@ -82,7 +82,7 @@ class _XTextFieldState extends State<XTextField> {
       focusNode: widget.node,
       obscuringCharacter: widget.obscureCharacter ?? ".",
       enabled: widget.isEnabled ?? true,
-      style: Theme.of(context).textTheme.bodyText1!.copyWith(
+      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
           fontSize: (widget.textSize?.sp ?? 11.sp).toDouble(),
           color: widget.normalTextColor ?? XColors.textColor,
           fontFamily: widget.fontFamily ?? "Mulish"),
@@ -102,7 +102,7 @@ class _XTextFieldState extends State<XTextField> {
         suffixText: widget.sufficeText ?? "",
         suffixIcon: widget.suffixIcon,
         hintText: widget.hintText,
-        hintStyle: Theme.of(context).textTheme.bodyText1!.copyWith(
+        hintStyle: Theme.of(context).textTheme.bodyLarge!.copyWith(
             fontSize: (widget.textSize?.sp ?? 11.sp).toDouble(),
             color: widget.hintTextColor ?? XColors.lightText,
             fontFamily: widget.fontFamily ?? "Mulish"),

@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:scheduler/app/resource.dart';
@@ -59,7 +58,7 @@ class HomeViewmodel extends ChangeNotifier {
 
   Stream<List<LectureModel>> getList() async* {
     log("helo");
-    StreamController<List<LectureModel>> _streamController =
+    StreamController<List<LectureModel>> streamController =
         StreamController.broadcast();
 
     final response = database
@@ -79,9 +78,9 @@ class HomeViewmodel extends ChangeNotifier {
     });
 
     log(lecturemodel.length.toString());
-    _streamController.sink.add(lecturemodel);
+    streamController.sink.add(lecturemodel);
 
-    yield* _streamController.stream;
+    yield* streamController.stream;
   }
 
   Future<void> getScheduledLectures() async {
@@ -100,7 +99,7 @@ class HomeViewmodel extends ChangeNotifier {
       //       toFirestore: (value, options) => value.toJson(),
       //     );
 
-      final response = await database
+      final response = database
           .collection("lectures")
           .doc(auth.currentUser!.uid)
           .collection("lecturesScheduled")

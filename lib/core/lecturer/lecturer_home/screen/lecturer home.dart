@@ -45,7 +45,6 @@ class _LecturerHomeScreenState extends State<LecturerHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final data = context.read<HomeViewmodel>();
     return Scaffold(
       backgroundColor: Colors.white,
       // appBar: AppBar(
@@ -111,7 +110,6 @@ class _LecturerHomeScreenState extends State<LecturerHomeScreen> {
                         ),
                       );
                     } else {
-                 
                       final List<LectureModel> data = [];
 
                       for (var element in snapshot.data!.docs) {

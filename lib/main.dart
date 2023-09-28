@@ -49,16 +49,15 @@ class MyApp extends StatelessWidget {
                 elevation: 0,
                 backgroundColor: Colors.white,
               ),
-              bottomAppBarColor: Colors.red,
               textTheme: TextTheme(
-                  bodyText1: TextStyle(
+                  bodyLarge: TextStyle(
                     fontFamily: "Poppins",
                     fontSize: 15,
                     height: 1.0,
                     fontWeight: FontWeight.w400,
                     color: XColors.textColor,
                   ),
-                  bodyText2: TextStyle(
+                  bodyMedium: TextStyle(
                     fontFamily: "Poppins",
                     fontSize: 15,
                     height: 1.0,
@@ -66,6 +65,7 @@ class MyApp extends StatelessWidget {
                     color: XColors.textColor,
                   )),
               visualDensity: VisualDensity.adaptivePlatformDensity,
+              bottomAppBarTheme: const BottomAppBarTheme(color: Colors.red),
             ),
             home: const SplashScreen(),
           ),

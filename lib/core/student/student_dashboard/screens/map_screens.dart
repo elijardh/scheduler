@@ -19,9 +19,9 @@ class MapSampleState extends State<MapSample> {
       Completer<GoogleMapController>();
   PointLatLng? position = const PointLatLng(7.3070, 5.1398);
   // this set will hold my markers
-  Set<Marker> _markers = {};
+  final Set<Marker> _markers = {};
 // this will hold the generated polylines
-  Set<Polyline> _polylines = {};
+  final Set<Polyline> _polylines = {};
 // this will hold each polyline coordinate as Lat and Lng pairs
   List<LatLng> polylineCoordinates = [];
 // this is the key object - the PolylinePoints

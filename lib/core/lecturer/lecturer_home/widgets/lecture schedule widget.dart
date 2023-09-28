@@ -6,8 +6,6 @@ import 'package:scheduler/app/presentations/colors.dart';
 import 'package:scheduler/app/presentations/margin.dart';
 import 'package:scheduler/app/presentations/texts.dart';
 import 'package:scheduler/core/lecturer/lecturer_home/model/lecture_model.dart';
-import 'package:scheduler/core/lecturer/lecturer_home/widgets/schedule_operation.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class LectureScheduleWidget extends StatefulWidget {
   final LectureModel? lectureModel;

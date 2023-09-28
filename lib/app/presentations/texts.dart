@@ -29,7 +29,7 @@ class NormalText extends StatelessWidget {
       text!,
       maxLines: maxLines,
       textAlign: textAlign ?? TextAlign.start,
-      style: Theme.of(context).textTheme.bodyText1!.copyWith(
+      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
           height: textHeight ?? 1.2,
           fontSize: fontSize != null ? (fontSize!.sp).toDouble() : 15.sp,
           color: textColor,
