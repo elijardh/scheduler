@@ -27,10 +27,16 @@ class _LecturerHomeScreenState extends State<LecturerHomeScreen> {
   FirebaseFirestore database = FirebaseFirestore.instance;
   FirebaseAuth auth = FirebaseAuth.instance;
 
+  DateTime now = DateTime.now();
+
+  DateTime? date;
+
   @override
   void initState() {
     super.initState();
 
+    date = DateTime(now.year, now.month, now.day);
+    log(date!.millisecondsSinceEpoch.toString());
     HomeViewmodel viewmodel = context.read<HomeViewmodel>();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       viewmodel.getList();
@@ -88,6 +94,9 @@ class _LecturerHomeScreenState extends State<LecturerHomeScreen> {
                       .collection("lectures")
                       .doc(auth.currentUser!.uid)
                       .collection("lecturesScheduled")
+                      .orderBy('date')
+                      .where('date',
+                          isGreaterThanOrEqualTo: date!.millisecondsSinceEpoch)
                       .snapshots(),
                   builder: (context, snapshot) {
                     if (snapshot.hasError) {
@@ -102,11 +111,13 @@ class _LecturerHomeScreenState extends State<LecturerHomeScreen> {
                         ),
                       );
                     } else {
+                 
                       final List<LectureModel> data = [];
 
                       for (var element in snapshot.data!.docs) {
                         data.add(LectureModel.fromJson(element));
                       }
+                      log(data.length.toString());
 
                       data.sort(
                         (a, b) {

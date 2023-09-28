@@ -85,10 +85,10 @@ class SQLHelper {
   }
 
   // Delete
-  static Future<void> deleteItem(int id) async {
+  static Future<void> deleteItem(String id) async {
     final db = await SQLHelper.db();
     try {
-      await db.delete("lectures", where: "id = ?", whereArgs: [id]);
+      await db.delete("lectures", where: "uuid = ?", whereArgs: [id]);
     } catch (err) {
       log("Something went wrong when deleting an item: $err");
     }

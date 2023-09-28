@@ -188,7 +188,9 @@ class _StudentDashboardState extends State<StudentDashboard> {
                                     if (map != null && map) {
                                       await MapLauncher.showDirections(
                                           mapType: MapType.google,
-                                          destination: Coords(7.2367, 5.2142));
+                                          destination: Coords(
+                                              double.parse(e.lat!),
+                                              double.parse(e.long!)));
                                     }
                                   },
                                   child: StudentLectureWidget(

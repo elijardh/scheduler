@@ -31,8 +31,22 @@ class _LectureScheduleScreenState extends State<LectureScheduleScreen> {
   TextEditingController dateController = TextEditingController();
   TextEditingController timeController = TextEditingController();
   List<LectureTheaterModel> lectureTheater = [
-    LectureTheaterModel(value: "ETF", lat: "7.306097", long: "5.140455"),
-    LectureTheaterModel(value: "2 in 1", lat: "7.2", long: "5.2")
+    LectureTheaterModel(
+        value: "ETF", lat: "7.302264205626066", long: "5.135638663419322"),
+    LectureTheaterModel(
+        value: "2 in 1 A", lat: "7.298341881183599", long: "5.136550971499132"),
+    LectureTheaterModel(
+        value: "2 in 1 B", lat: "7.298010777468715", long: "5.136607357996458"),
+    LectureTheaterModel(
+        value: "Big LT", lat: "7.3024565598558615", long: "5.13500552288029"),
+    LectureTheaterModel(
+        value: "BOC", lat: "7.2975320817280585", long: "5.132591268537864"),
+    LectureTheaterModel(
+        value: "Small LT", lat: "7.302500853477807", long: "5.134675388724914"),
+    LectureTheaterModel(
+        value: "1000 LT", lat: "7.297820660011135", long: "5.132663372635468"),
+    LectureTheaterModel(
+        value: "FBN", lat: "7.297928831542158", long: "5.132976312978375"),
   ];
   LectureTheaterModel? lectureTheather;
 
@@ -46,7 +60,6 @@ class _LectureScheduleScreenState extends State<LectureScheduleScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     lectureTheather = lectureTheater.first;
@@ -248,7 +261,7 @@ class _LectureScheduleScreenState extends State<LectureScheduleScreen> {
                   height: 40.h,
                   child: XTextField(
                     controller: timeController,
-                    hintText: "Pick Date",
+                    hintText: "Pick Time",
                     borderWidth: 1,
                     isEnabled: false,
                     normalBorderColor: XColors.mainColor,
@@ -349,7 +362,7 @@ class _LectureScheduleScreenState extends State<LectureScheduleScreen> {
     Map<String, dynamic> data = {
       "lectureTitle": courseTitleController.text,
       "lectureCode": courseCodeController.text,
-      "date": Timestamp.fromDate(lectureDate!).millisecondsSinceEpoch,
+      "date": lectureDate!.millisecondsSinceEpoch,
       "time": timeOfLecture!.format(context),
       "theater": lectureTheather?.value,
       "department": chosenDeprt,
@@ -378,7 +391,7 @@ class _LectureScheduleScreenState extends State<LectureScheduleScreen> {
           ),
         ),
       );
-      // popView(context);
+      popView(context);
     } else {
       context.loaderOverlay.hide();
       ScaffoldMessenger.of(context).showSnackBar(
