@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:scheduler/app/presentations/colors.dart';
 import 'package:scheduler/app/presentations/texts.dart';
 import 'package:scheduler/core/lecturer/lecturer_home/model/lecture_model.dart';
 import 'package:scheduler/core/lecturer/lecturer_home/widgets/lecture%20schedule%20widget.dart';
